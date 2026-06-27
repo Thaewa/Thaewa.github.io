@@ -203,6 +203,22 @@ section {
     color: var(--muted);
 }
 
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(340px, 1.05fr);
+    gap: 46px;
+    align-items: start;
+}
+
+.about-layout p {
+    color: var(--muted);
+}
+
+.about-photo img {
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+}
+
 .education-story {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
@@ -215,6 +231,161 @@ section {
     grid-template-columns: minmax(300px, 1fr) minmax(0, 0.9fr);
     gap: 46px;
     align-items: center;
+}
+
+.publication-story,
+.capstone-story,
+.graduation-story,
+.campus-memory {
+    margin-top: 42px;
+    padding-top: 34px;
+    border-top: 1px solid var(--line);
+}
+
+.publication-story {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
+    gap: 32px;
+    align-items: start;
+}
+
+.publication-story h3 {
+    margin: 0 0 14px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.publication-story p {
+    color: var(--muted);
+}
+
+.publication-list {
+    display: grid;
+    gap: 12px;
+}
+
+.publication-list article {
+    padding: 18px;
+    background: var(--paper);
+    border: 1px solid var(--soft-line);
+    border-radius: 8px;
+}
+
+.publication-list span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.publication-list a {
+    color: var(--text);
+    text-decoration-color: var(--accent);
+    text-underline-offset: 4px;
+}
+
+.capstone-story {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1.15fr);
+    gap: 36px;
+    align-items: start;
+}
+
+.capstone-story h3 {
+    margin: 0 0 14px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.capstone-story p {
+    color: var(--muted);
+}
+
+.capstone-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.capstone-graph-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.capstone-graph-gallery figure {
+    overflow: hidden;
+    margin: 0;
+}
+
+.capstone-graph-gallery {
+    display: grid;
+    justify-items: center;
+    align-self: start;
+}
+
+.capstone-graph-gallery img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 540px;
+    object-fit: contain;
+}
+
+.graduation-story h3,
+.campus-memory h3 {
+    margin: 0 0 10px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.graduation-story p,
+.campus-memory p {
+    max-width: 820px;
+    color: var(--muted);
+}
+
+.campus-gallery,
+.graduation-gallery {
+    display: grid;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.campus-gallery {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.graduation-gallery {
+    grid-template-columns: 0.9fr 0.9fr 1.2fr;
+}
+
+.campus-gallery figure,
+.graduation-gallery figure {
+    overflow: hidden;
+    margin: 0;
+    background: var(--paper);
+    border: 1px solid var(--soft-line);
+    border-radius: 8px;
+}
+
+.campus-gallery figure:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.campus-gallery img,
+.graduation-gallery img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background: #0b1018;
 }
 
 .hackathon-story {
@@ -554,7 +725,10 @@ footer {
     }
 
     .hero-layout,
+    .about-layout,
     .education-story,
+    .publication-story,
+    .capstone-story,
     .campus-story,
     .life-story,
     .interest-grid,
@@ -573,6 +747,16 @@ footer {
     }
 
     .hackathon-gallery figure:first-child {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+
+    .campus-gallery,
+    .graduation-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .campus-gallery figure:first-child {
         grid-column: 1 / -1;
         grid-row: auto;
     }
@@ -648,11 +832,20 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .capstone-graph-gallery {
+        grid-template-columns: 1fr;
+    }
+
     .life-gallery {
         grid-template-columns: 1fr;
     }
 
     .hackathon-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .campus-gallery,
+    .graduation-gallery {
         grid-template-columns: 1fr;
     }
 }
