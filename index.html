@@ -23,18 +23,16 @@
         <nav class="container">
             <a class="logo" href="#home">Thaewa Tansarn</a>
 
+
             <div class="nav-links">
                 <a href="#about">About</a>
-                <a href="#education">Education</a>
-                <a href="#arizona-life">Arizona</a>
-                <a href="#thailand-life">Thailand</a>
-                <a href="#interests">Interests</a>
-                <a href="#bookshelf">Bookshelf</a>
-                <a href="#hobbies">Hobbies</a>
                 <a href="#work">Work</a>
                 <a href="#notes">Notes</a>
+                <a href="#education">Background</a>
                 <a href="#contact">Contact</a>
             </div>
+
+
         </nav>
     </header>
 
@@ -68,16 +66,12 @@
                     <h2>Current Focus</h2>
 
                     <ul>
-                        <li>Real-time behavior and RTOS debugging</li>
+                        <li>Real-time systems and RTOS debugging</li>
                         <li>Firmware architecture for MCU-based systems</li>
-                        <li>Linux, QNX, VxWorks, and device-level interfaces</li>
-                        <li>Communication middleware for industrial and automotive systems</li>
-                        <li>Device authentication between embedded control devices</li>
-                        <li>Building a small Cortex-M kernel to study scheduling and synchronization</li>
-                        <li>ARM assembly, bare-metal programming, and STM32 bootloaders</li>
-                        <li>Swarm intelligence, edge AI, and NPU-aware embedded systems</li>
-                        <li>Simulation, machine learning, and HPC as tools for engineering problems</li>
+                        <li>Communication middleware and device integration</li>
+                        <li>Embedded Linux and low-level system interfaces</li>
                     </ul>
+
                 </aside>
             </div>
         </section>
@@ -106,6 +100,123 @@
                     machine learning. I like ideas that become tools, and tools that help
                     engineers understand what a system is really doing.
                 </p>
+            </div>
+        </section>
+
+                <section id="work">
+            <div class="container">
+                <h2 class="section-title">Selected Work</h2>
+
+                <div class="work-list">
+                    <article class="work-item">
+                        <div class="work-meta">RTOS / STM32 / FreeRTOS</div>
+
+                        <h3>A FreeRTOS hang that did not look like a scheduling bug at first</h3>
+
+                        <p>
+                            Investigated a long-runtime system stall that led into mutex
+                            blocking while interrupts were disabled. The fix came from
+                            proving that PRIMASK was masking PendSV during a blocking path,
+                            closing the BASEPRI-only hypothesis, and restructuring the code
+                            into short snapshot and commit phases around the long-running
+                            work. The corrected firmware later passed an eight-hour
+                            endurance run without reproducing the hang.
+                        </p>
+
+                        <figure class="work-media">
+                            <img
+                                src="assets/scope-four-channel.jpg"
+                                alt="Four oscilloscope channels showing timing traces from an embedded system"
+                            >
+                        </figure>
+                    </article>
+
+                    <article class="work-item">
+                        <div class="work-meta">Current Work / Cortex-M / STM32F4</div>
+
+                        <h3>A small RTOS kernel for learning the details that commercial kernels hide</h3>
+
+                        <p>
+                            Building a minimalist kernel on STM32F4 with manually initialized
+                            thread stacks, a SysTick-driven context switch, round-robin
+                            scheduling, an idle task, millisecond delays, and blocking binary
+                            semaphores. The next pieces I am working toward are mutexes and
+                            priority inheritance, because the interesting bugs usually begin
+                            where synchronization meets scheduling policy.
+                        </p>
+
+                        <figure class="work-media">
+                            <img
+                                src="assets/stm32-scope-bench.jpg"
+                                alt="STM32 board connected to an oscilloscope and breadboard during kernel timing experiments"
+                            >
+                        </figure>
+                    </article>
+
+                    <article class="work-item">
+                        <div class="work-meta">Embedded Control / STM32 / Device Authentication</div>
+
+                        <h3>Device authentication between embedded control devices</h3>
+
+                        <p>
+                            Developing and validating an authentication flow between embedded
+                            control devices. The work combines firmware integration, secure-device
+                            communication, board-level bring-up, and signal validation across
+                            multiple hardware interfaces.
+                        </p>
+
+                        <figure class="work-media">
+                            <img
+                                src="assets/cpc-enhanced-control-authentication.jpg"
+                                alt="CPC enhanced control hardware setup with oscilloscope signal validation and connected embedded devices"
+                            >
+                        </figure>
+                    </article>
+
+                    <article class="work-item">
+                        <div class="work-meta">Industrial Test Systems / QNX / VxWorks</div>
+
+                        <h3>Making automated firmware validation less slow and less fragile</h3>
+
+                        <p>
+                            Built firmware test applications and TCP/IP middleware for
+                            industrial test platforms, including Intel Atom/VxWorks and
+                            QNX on Zynq-7000. One redesign reduced validation time from
+                            about 35 minutes to 32 minutes per unit, which matters when a
+                            process repeats all day.
+                        </p>
+
+                        <div class="work-gallery industrial-gallery">
+                            <figure>
+                                <img
+                                    src="assets/industrial-qnx-vxworks-test-station.jpg"
+                                    alt="Industrial firmware validation station with test software, embedded boards, and debugging hardware"
+                                >
+                            </figure>
+
+                            <figure>
+                                <img
+                                    src="assets/industrial-qnx-vxworks-debug-wiring.jpg"
+                                    alt="Close-up wiring and probes on an industrial controller during QNX and VxWorks validation"
+                                >
+                            </figure>
+                        </div>
+                    </article>
+
+                    <article class="work-item">
+                        <div class="work-meta">Automotive / Renesas MCU / CAN / LIN</div>
+
+                        <h3>Diagnostic middleware for automotive ECUs</h3>
+
+                        <p>
+                            Developed production-grade transport, network, and session
+                            layer middleware in C for Renesas microcontrollers, including
+                            LIN and CAN diagnostics with MISRA-C discipline and unit tests
+                            shaped by automotive safety expectations.
+                        </p>
+                    </article>
+
+                </div>
             </div>
         </section>
 
@@ -459,211 +570,6 @@
                             Exploring multi-agent behavior, simple local policies, and
                             how those ideas might connect with edge AI systems where
                             latency, power, memory, and NPU support all matter.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="work">
-            <div class="container">
-                <h2 class="section-title">Selected Work</h2>
-
-                <div class="work-list">
-                    <article class="work-item">
-                        <div class="work-meta">RTOS / STM32 / FreeRTOS</div>
-
-                        <h3>A FreeRTOS hang that did not look like a scheduling bug at first</h3>
-
-                        <p>
-                            Investigated a long-runtime system stall that led into mutex
-                            blocking while interrupts were disabled. The fix came from
-                            proving that PRIMASK was masking PendSV during a blocking path,
-                            closing the BASEPRI-only hypothesis, and restructuring the code
-                            into short snapshot and commit phases around the long-running
-                            work. The corrected firmware later passed an eight-hour
-                            endurance run without reproducing the hang.
-                        </p>
-
-                        <figure class="work-media">
-                            <img
-                                src="assets/scope-four-channel.jpg"
-                                alt="Four oscilloscope channels showing timing traces from an embedded system"
-                            >
-                        </figure>
-                    </article>
-
-                    <article class="work-item">
-                        <div class="work-meta">Current Work / Cortex-M / STM32F4</div>
-
-                        <h3>A small RTOS kernel for learning the details that commercial kernels hide</h3>
-
-                        <p>
-                            Building a minimalist kernel on STM32F4 with manually initialized
-                            thread stacks, a SysTick-driven context switch, round-robin
-                            scheduling, an idle task, millisecond delays, and blocking binary
-                            semaphores. The next pieces I am working toward are mutexes and
-                            priority inheritance, because the interesting bugs usually begin
-                            where synchronization meets scheduling policy.
-                        </p>
-
-                        <figure class="work-media">
-                            <img
-                                src="assets/stm32-scope-bench.jpg"
-                                alt="STM32 board connected to an oscilloscope and breadboard during kernel timing experiments"
-                            >
-                        </figure>
-                    </article>
-
-                    <article class="work-item">
-                        <div class="work-meta">Current Work / CPC Enhanced Control / Device Authentication</div>
-
-                        <h3>Device authentication for CPC enhanced control hardware</h3>
-
-                        <p>
-                            Working on a CPC enhanced control setup where connected
-                            devices need to identify and authenticate with each other
-                            before control behavior can be trusted. The work sits at the
-                            boundary between embedded control, board-level integration,
-                            signal validation, and practical security assumptions for
-                            devices that have to cooperate in the field.
-                        </p>
-
-                        <figure class="work-media">
-                            <img
-                                src="assets/cpc-enhanced-control-authentication.jpg"
-                                alt="CPC enhanced control hardware setup with oscilloscope signal validation and connected embedded devices"
-                            >
-                        </figure>
-                    </article>
-
-                    <article class="work-item">
-                        <div class="work-meta">Industrial Test Systems / QNX / VxWorks</div>
-
-                        <h3>Making automated firmware validation less slow and less fragile</h3>
-
-                        <p>
-                            Built firmware test applications and TCP/IP middleware for
-                            industrial test platforms, including Intel Atom/VxWorks and
-                            QNX on Zynq-7000. One redesign reduced validation time from
-                            about 35 minutes to 32 minutes per unit, which matters when a
-                            process repeats all day.
-                        </p>
-
-                        <div class="work-gallery industrial-gallery">
-                            <figure>
-                                <img
-                                    src="assets/industrial-qnx-vxworks-test-station.jpg"
-                                    alt="Industrial firmware validation station with test software, embedded boards, and debugging hardware"
-                                >
-                            </figure>
-
-                            <figure>
-                                <img
-                                    src="assets/industrial-qnx-vxworks-debug-wiring.jpg"
-                                    alt="Close-up wiring and probes on an industrial controller during QNX and VxWorks validation"
-                                >
-                            </figure>
-                        </div>
-                    </article>
-
-                    <article class="work-item">
-                        <div class="work-meta">Earlier Freelance Work / Factory IoT</div>
-
-                        <h3>Factory IoT monitoring in the middle of real production constraints</h3>
-
-                        <p>
-                            Built and installed an IoT-style monitoring setup for factory
-                            equipment several years ago, working around existing electrical
-                            panels, machine layout, sensor wiring, enclosures, and the
-                            practical realities of keeping production equipment observable
-                            without disturbing the process it was meant to watch.
-                        </p>
-
-                        <div class="work-gallery iot-gallery">
-                            <figure>
-                                <img
-                                    src="assets/factory-iot-dashboard.jpg"
-                                    alt="Factory monitoring dashboard showing current readings from production equipment"
-                                >
-                            </figure>
-
-                            <figure>
-                                <img
-                                    src="assets/factory-iot-nodes.jpg"
-                                    alt="Installed IoT monitoring nodes with LCD readouts on a factory electrical panel"
-                                >
-                            </figure>
-
-                            <figure>
-                                <img
-                                    src="assets/factory-iot-power-panel.jpg"
-                                    alt="Factory power distribution panel with monitoring devices installed beside it"
-                                >
-                            </figure>
-
-                            <figure>
-                                <img
-                                    src="assets/factory-iot-field-install.jpg"
-                                    alt="Field installation work for an IoT monitoring system in a factory"
-                                >
-                            </figure>
-                        </div>
-                    </article>
-
-                    <article class="work-item">
-                        <div class="work-meta">Automotive / Renesas MCU / CAN / LIN</div>
-
-                        <h3>Diagnostic middleware for automotive ECUs</h3>
-
-                        <p>
-                            Developed production-grade transport, network, and session
-                            layer middleware in C for Renesas microcontrollers, including
-                            LIN and CAN diagnostics with MISRA-C discipline and unit tests
-                            shaped by automotive safety expectations.
-                        </p>
-                    </article>
-
-                    <article class="work-item">
-                        <div class="work-meta">CUDA / HPC / Operating Systems</div>
-
-                        <h3>Graduate systems projects with a performance lens</h3>
-
-                        <p>
-                            Implemented CUDA versions of an LDPC decoder and explored
-                            memory placement, streaming, and loop unrolling for speedup.
-                            The project was a useful bridge between algorithmic thinking,
-                            measurement, and the practical cost of moving data.
-                        </p>
-                    </article>
-
-                    <article class="work-item">
-                        <div class="work-meta">Swarm Intelligence / Agent-Based Simulation / Python</div>
-
-                        <h3>A multi-agent simulator for exploring local rules and emergent behavior</h3>
-
-                        <p>
-                            Built a configurable Python simulation around interacting
-                            agents, local hunger cues, feeder and forager roles, movement
-                            policies, event logging, and aggregate metrics. The project
-                            is part of a broader interest in swarm intelligence: how
-                            simple local rules can produce system-level behavior, and how
-                            those ideas might later connect to edge AI on constrained
-                            hardware.
-                        </p>
-                    </article>
-
-                    <article class="work-item">
-                        <div class="work-meta">Operating Systems / Storage Systems</div>
-
-                        <h3>Log-structured file system study</h3>
-
-                        <p>
-                            Built a user-space file system prototype as part of an advanced
-                            operating systems course. I keep the source code and
-                            assignment-specific details private, but the project shaped
-                            how I think about metadata recovery, consistency, storage
-                            invariants, and tests for edge cases.
                         </p>
                     </article>
                 </div>
