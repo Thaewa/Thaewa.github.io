@@ -313,27 +313,21 @@ section {
 }
 
 .capstone-graph-gallery {
-    display: grid;
-    grid-template-columns: 1fr;
+    width: 100%;
+    align-self: start;
 }
 
 .capstone-graph-gallery figure {
-    overflow: hidden;
+    width: 100%;
     margin: 0;
-}
-
-.capstone-graph-gallery {
-    display: grid;
-    justify-items: center;
-    align-self: start;
+    overflow: hidden;
 }
 
 .capstone-graph-gallery img {
     display: block;
     width: 100%;
-    max-width: 100%;
     height: 540px;
-    object-fit: contain;
+    object-fit: fill;
 }
 
 .graduation-story h3,
