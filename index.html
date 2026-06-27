@@ -10,10 +10,10 @@
 
     <meta
         name="description"
-        content="Portfolio of Thaewa Tansarn, an embedded systems and firmware engineer specializing in RTOS, STM32, communication protocols, and low-level debugging."
+        content="Personal site of Thaewa Tansarn, an embedded systems and firmware engineer interested in RTOS behavior, low-level debugging, communication systems, and practical notes for engineers."
     >
 
-    <title>Thaewa Tansarn | Embedded Systems & Firmware Engineer</title>
+    <title>Thaewa Tansarn | Embedded Systems, Firmware, and Notes</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -25,9 +25,14 @@
 
             <div class="nav-links">
                 <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#articles">Articles</a>
+                <a href="#education">Education</a>
+                <a href="#arizona-life">Arizona</a>
+                <a href="#thailand-life">Thailand</a>
+                <a href="#interests">Interests</a>
+                <a href="#bookshelf">Bookshelf</a>
+                <a href="#hobbies">Hobbies</a>
+                <a href="#work">Work</a>
+                <a href="#notes">Notes</a>
                 <a href="#contact">Contact</a>
             </div>
         </nav>
@@ -35,206 +40,696 @@
 
     <main>
         <section class="hero" id="home">
-            <div class="container">
-                <div class="hero-label">
-                    Embedded Systems & Firmware Engineer
+            <div class="container hero-layout">
+                <div>
+                    <p class="eyebrow">Embedded systems, firmware, and the small details that make machines behave.</p>
+
+                    <h1>Thaewa Tansarn</h1>
+
+                    <p class="lead">
+                        I work close to hardware: RTOS timing issues, MCU peripherals,
+                        communication stacks, test systems, and the kind of failures
+                        that only appear when software meets the real world.
+                    </p>
+
+                    <p>
+                        This site is a place for selected work, engineering notes,
+                        and practical explanations I wish someone had handed me
+                        earlier in my own embedded systems journey.
+                    </p>
+
+                    <div class="buttons">
+                        <a class="button primary" href="#notes">Read Notes</a>
+                        <a class="button" href="#work">Selected Work</a>
+                    </div>
                 </div>
 
-                <h1>Thaewa Tansarn</h1>
+                <aside class="profile-panel" aria-label="Focus areas">
+                    <h2>Current Focus</h2>
 
-                <h2>
-                    Building reliable low-level software for real-world systems.
-                </h2>
-
-                <p>
-                    I specialize in embedded firmware, real-time operating systems,
-                    STM32 microcontrollers, device communication, system integration,
-                    and complex low-level debugging.
-                </p>
-
-                <div class="buttons">
-                    <a class="button primary" href="#projects">
-                        View Projects
-                    </a>
-
-                    <a
-                        class="button"
-                        href="https://github.com/Thaewa"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        GitHub
-                    </a>
-                </div>
+                    <ul>
+                        <li>Real-time behavior and RTOS debugging</li>
+                        <li>Firmware architecture for MCU-based systems</li>
+                        <li>Linux, QNX, VxWorks, and device-level interfaces</li>
+                        <li>Communication middleware for industrial and automotive systems</li>
+                        <li>Device authentication between embedded control devices</li>
+                        <li>Building a small Cortex-M kernel to study scheduling and synchronization</li>
+                        <li>ARM assembly, bare-metal programming, and STM32 bootloaders</li>
+                        <li>Swarm intelligence, edge AI, and NPU-aware embedded systems</li>
+                        <li>Simulation, machine learning, and HPC as tools for engineering problems</li>
+                    </ul>
+                </aside>
             </div>
         </section>
 
         <section id="about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
+            <div class="container narrow">
+                <h2 class="section-title">About</h2>
 
-                <div class="about-grid">
+                <p>
+                    I am an embedded systems and firmware engineer with experience
+                    across industrial automation, transportation, automotive electronics,
+                    manufacturing systems, and graduate research.
+                </p>
+
+                <p>
+                    The work I enjoy most usually has a messy boundary: part software,
+                    part hardware, part timing, part field observation. A train control
+                    issue in one country, a factory test system that needs to run faster,
+                    a mutex that behaves perfectly until interrupts are disabled, or a
+                    microcontroller migration where one alternate function decides the day.
+                </p>
+
+                <p>
+                    My background is practical first, but I keep a strong interest in
+                    operating systems, embedded Linux, high-performance computing, and
+                    machine learning. I like ideas that become tools, and tools that help
+                    engineers understand what a system is really doing.
+                </p>
+            </div>
+        </section>
+
+        <section id="education">
+            <div class="container">
+                <div class="education-story">
                     <div>
-                        <p>
-                            I am an embedded systems and firmware engineer with
-                            experience in industrial automation, transportation,
-                            automotive electronics, and HVAC control systems.
+                        <h2 class="section-title">Academic Path</h2>
+
+                        <p class="section-intro">
+                            My formal education moved from electronics and communication
+                            engineering, into electrical and computer engineering, and
+                            later into information science with machine learning. I think
+                            that mix explains a lot about how I work: I like systems where
+                            physical signals, software behavior, and data all matter at
+                            the same time.
+                        </p>
+
+                        <div class="education-notes">
+                            <p>
+                                <strong>University of Arizona</strong>
+                                Graduate study in Information Science, with a focus on
+                                machine learning and computational modeling.
+                            </p>
+
+                            <p>
+                                <strong>Thammasat University</strong>
+                                Master of Electrical and Computer Engineering.
+                            </p>
+
+                            <p>
+                                <strong>Rajamangala University of Technology Krungthep</strong>
+                                Bachelor of Electronics and Telecommunication Engineering.
+                            </p>
+                        </div>
+                    </div>
+
+                    <figure class="media-card">
+                        <img
+                            src="assets/poster-wasp-simulation.jpg"
+                            alt="Thaewa at a University of Arizona research poster session about larval feeding route simulation in social wasps"
+                        >
+                        <figcaption>
+                            Poster session for a simulation project on larval feeding
+                            routes in social wasps, one of the threads that pulled me
+                            toward multi-agent systems and swarm intelligence.
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="arizona-life">
+            <div class="container">
+                <div class="campus-story">
+                    <figure class="media-card">
+                        <img
+                            src="assets/arizona-wildcats-game.jpg"
+                            alt="University of Arizona Wildcats football game at Arizona Stadium"
+                        >
+                        <figcaption>
+                            A very Arizona kind of evening: noise, color, and a reminder
+                            that graduate school is also about learning how a place feels.
+                        </figcaption>
+                    </figure>
+
+                    <div>
+                        <h2 class="section-title">Arizona, Outside the Lab</h2>
+
+                        <p class="section-intro">
+                            Living and studying at the University of Arizona gave me more
+                            than coursework and research. It put me around people who were
+                            asking different kinds of questions, building strange little
+                            prototypes, arguing kindly over methods, and taking community
+                            seriously.
                         </p>
 
                         <p>
-                            My work focuses on firmware architecture, RTOS behavior,
-                            microcontroller peripherals, communication protocols,
-                            hardware-software integration, and root-cause analysis
-                            of difficult system failures.
+                            I liked that mix: quiet technical work during the week, poster
+                            sessions where ideas had to be explained clearly, and campus
+                            moments that made the place feel alive. It helped me become
+                            more comfortable moving between engineering detail and human
+                            explanation, which is still how I like to work.
                         </p>
+                    </div>
+                </div>
+
+                <div class="hackathon-story">
+                    <div>
+                        <h3>Hack Arizona</h3>
 
                         <p>
-                            I am especially interested in real-time systems,
-                            operating systems, embedded Linux, high-performance
-                            computing, and edge AI.
+                            I also joined Hack Arizona while I was at U of A. I liked the
+                            pace of it: people forming teams, explaining ideas quickly,
+                            sketching systems on whiteboards, and trying to make something
+                            useful before the energy in the room ran out.
                         </p>
                     </div>
 
-                    <div class="skills">
-                        <span class="skill">C</span>
-                        <span class="skill">C++</span>
-                        <span class="skill">Python</span>
-                        <span class="skill">STM32</span>
-                        <span class="skill">FreeRTOS</span>
-                        <span class="skill">CMSIS</span>
-                        <span class="skill">Embedded Linux</span>
-                        <span class="skill">UART</span>
-                        <span class="skill">SPI</span>
-                        <span class="skill">I2C</span>
-                        <span class="skill">CAN</span>
-                        <span class="skill">CUDA</span>
-                        <span class="skill">GDB</span>
-                        <span class="skill">Git</span>
+                    <div class="hackathon-gallery" aria-label="Hack Arizona at the University of Arizona">
+                        <figure>
+                            <img
+                                src="assets/hack-arizona-sponsors.jpg"
+                                alt="Hack Arizona opening session at the University of Arizona"
+                            >
+                        </figure>
+
+                        <figure>
+                            <img
+                                src="assets/hack-arizona-team-room.jpg"
+                                alt="Hack Arizona team working in a meeting room"
+                            >
+                        </figure>
+
+                        <figure>
+                            <img
+                                src="assets/hack-arizona-demo-floor.jpg"
+                                alt="Hack Arizona participants during the event"
+                            >
+                        </figure>
+
+                        <figure>
+                            <img
+                                src="assets/hack-arizona-table.jpg"
+                                alt="Hack Arizona table with stickers and participant badges"
+                            >
+                        </figure>
+
+                        <figure>
+                            <img
+                                src="assets/hack-arizona-badge.jpg"
+                                alt="Hack Arizona participant badge and lanyard"
+                            >
+                        </figure>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="experience">
+        <section id="thailand-life">
             <div class="container">
-                <h2 class="section-title">Experience</h2>
+                <div class="life-story">
+                    <div>
+                        <h2 class="section-title">Life in Thailand</h2>
 
-                <div class="timeline-item">
-                    <h3>Embedded Systems and Firmware Engineering</h3>
+                        <p class="section-intro">
+                            Outside work, I spend a lot of time with my two dogs, Array
+                            and Linux. Their names probably say enough about the kind of
+                            person who raised them.
+                        </p>
 
-                    <p>
-                        Firmware development, system integration, RTOS debugging,
-                        MCU migration, and communication-stack development.
-                    </p>
-                </div>
+                        <p>
+                            These photos are from a dog show where I brought Array to
+                            compete. It is a different kind of discipline from engineering,
+                            but I like the same parts: patience, observation, small
+                            adjustments, and learning how to work with another living
+                            personality instead of forcing everything into a plan.
+                        </p>
+                    </div>
 
-                <div class="timeline-item">
-                    <h3>Industrial Automation</h3>
+                    <div class="life-gallery" aria-label="Array at a dog show in Thailand">
+                        <figure>
+                            <img
+                                src="assets/array-dog-show-podium.jpg"
+                                alt="Array at a dog show podium in Thailand"
+                            >
+                        </figure>
 
-                    <p>
-                        Test firmware and embedded software for industrial control
-                        and automation platforms.
-                    </p>
-                </div>
+                        <figure>
+                            <img
+                                src="assets/array-dog-show-award.jpg"
+                                alt="Thaewa and Array receiving an award at a dog show"
+                            >
+                        </figure>
 
-                <div class="timeline-item">
-                    <h3>Transportation and Automotive Systems</h3>
+                        <figure>
+                            <img
+                                src="assets/array-training-yard.jpg"
+                                alt="Array in a training yard"
+                            >
+                        </figure>
 
-                    <p>
-                        Embedded software development involving Linux, CAN, LIN,
-                        communication middleware, and safety-related systems.
-                    </p>
+                        <figure>
+                            <img
+                                src="assets/array-kennel-portrait.jpg"
+                                alt="Array standing by the kennel gate"
+                            >
+                        </figure>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects">
+        <section id="interests">
             <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
+                <h2 class="section-title">Interests</h2>
 
-                <div class="cards">
-                    <article class="card">
-                        <div class="card-meta">RTOS / STM32</div>
-
-                        <h3>FreeRTOS Deadlock Root-Cause Investigation</h3>
-
+                <div class="interest-grid">
+                    <article>
+                        <h3>Low-Level Debugging</h3>
                         <p>
-                            Diagnosed a long-runtime system hang caused by blocking
-                            on a mutex while interrupts were disabled. Verified the
-                            root cause using call-stack analysis, RTOS internals,
-                            PRIMASK state, queue structures, and runtime tracing.
+                            Root-causing failures through call stacks, registers,
+                            scheduler state, bus traces, logs, and the uncomfortable
+                            evidence that appears after the first easy theory fails.
                         </p>
                     </article>
 
-                    <article class="card">
-                        <div class="card-meta">STM32H573 / CMSIS</div>
-
-                        <h3>STM32H573 176-Pin to 100-Pin Migration</h3>
-
+                    <article>
+                        <h3>Real-Time Systems</h3>
                         <p>
-                            Migrated UART, I2C, GPIO, clock, cryptographic device,
-                            and PLC communication interfaces to a new STM32 package
-                            using CMSIS-level peripheral configuration.
+                            Understanding how tasks, interrupts, priorities, critical
+                            sections, queues, and timing assumptions shape the behavior
+                            of firmware under load.
                         </p>
                     </article>
 
-                    <article class="card">
-                        <div class="card-meta">Operating Systems</div>
-
-                        <h3>Custom Preemptive RTOS Kernel</h3>
-
+                    <article>
+                        <h3>Communication Systems</h3>
                         <p>
-                            Developed a small RTOS kernel with task scheduling,
-                            context switching, SysTick-based preemption, and binary
-                            semaphore synchronization on an STM32 microcontroller.
+                            Building and debugging middleware around CAN, LIN, UART,
+                            SPI, I2C, PCI memory-mapped I/O, TCP/IP, and device nodes
+                            where the protocol is only half the story.
                         </p>
                     </article>
 
-                    <article class="card">
-                        <div class="card-meta">CUDA / HPC</div>
-
-                        <h3>GPU-Based LDPC Decoder</h3>
-
+                    <article>
+                        <h3>Swarm Intelligence and Edge AI</h3>
                         <p>
-                            Implemented and evaluated a parallel Gallager-B LDPC
-                            decoding prototype using CUDA for GPU acceleration.
+                            Exploring how local rules, distributed agents, and lightweight
+                            models might become useful on constrained edge devices,
+                            especially as NPUs become part of everyday embedded platforms.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Engineering for Learners</h3>
+                        <p>
+                            Turning hard-earned debugging lessons into notes that help
+                            newer engineers build intuition instead of memorizing
+                            scattered rules.
                         </p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="articles">
+        <section id="bookshelf">
             <div class="container">
-                <h2 class="section-title">Technical Articles</h2>
+                <div class="bookshelf-story">
+                    <div>
+                        <h2 class="section-title">Bookshelf</h2>
 
-                <div class="cards">
-                    <article class="card">
-                        <div class="card-meta">Coming Soon</div>
-
-                        <h3>
-                            Why FreeRTOS Can Stall When a Task Blocks with
-                            Interrupts Disabled
-                        </h3>
+                        <p class="section-intro">
+                            I like buying technical books, reading them slowly, and keeping
+                            them around as a map of the problems I have cared about. These
+                            are not just references to me; they are the books I keep coming
+                            back to when I want to rebuild an idea from first principles.
+                        </p>
 
                         <p>
-                            A detailed investigation of PRIMASK, PendSV,
-                            priority inheritance, mutex waiting, and scheduler
-                            behavior.
+                            During my bachelor's years, embedded systems and
+                            electromagnetics were the two subjects I kept returning to.
+                            Embedded systems eventually became the path I followed more
+                            seriously, but electromagnetics is still one of the reasons I
+                            enjoy thinking about what happens underneath the circuit.
+                        </p>
+                    </div>
+
+                    <div class="book-gallery" aria-label="Technical books Thaewa reads and collects">
+                        <figure>
+                            <img
+                                src="assets/books-engineering-electromagnetics.jpg"
+                                alt="Engineering Electromagnetics by William H. Hayt Jr. and John A. Buck"
+                            >
+                        </figure>
+
+                        <figure>
+                            <img
+                                src="assets/books-operating-system-principles.jpg"
+                                alt="Operating System Principles by Abraham Silberschatz, Peter Baer Galvin, and Greg Gagne"
+                            >
+                        </figure>
+
+                        <figure>
+                            <img
+                                src="assets/books-qnx-cookbook.jpg"
+                                alt="The QNX Cookbook, Recipes for Programmers by Rob Krten"
+                            >
+                        </figure>
+
+                        <figure>
+                            <img
+                                src="assets/books-ml-cpp.jpg"
+                                alt="Hands-On Machine Learning with C++ book"
+                            >
+                        </figure>
+
+                        <figure>
+                            <img
+                                src="assets/books-computer-architecture.jpg"
+                                alt="Computer Organization and Architecture, Designing for Performance by William Stallings"
+                            >
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hobbies">
+            <div class="container">
+                <h2 class="section-title">Technical Hobbies</h2>
+
+                <p class="section-intro">
+                    Some things I study because they are useful, and some because they
+                    make the machine feel less mysterious. These are the topics I keep
+                    returning to through small experiments, notes, and weekend side
+                    projects that often become useful later in real debugging work.
+                </p>
+
+                <div class="hobby-grid">
+                    <article>
+                        <h3>ARM and GCC Assembly</h3>
+                        <p>
+                            Startup files, register usage, stack behavior, C and assembly
+                            boundaries, arithmetic routines, branching, IT blocks, and the
+                            habit of reading what the compiler and CPU are actually doing.
                         </p>
                     </article>
 
-                    <article class="card">
-                        <div class="card-meta">Coming Soon</div>
+                    <article>
+                        <h3>Bare-Metal STM32 Programming</h3>
+                        <p>
+                            Working close to CMSIS and reference manuals: clock setup,
+                            GPIO, UART, timers, interrupts, linker scripts, startup code,
+                            and the small assumptions that decide whether firmware boots.
+                        </p>
+                    </article>
 
-                        <h3>
-                            Porting STM32 Firmware Across MCU Packages
-                        </h3>
+                    <article>
+                        <h3>Bootloaders</h3>
+                        <p>
+                            Exploring application handoff, flash layout, vector tables,
+                            minimal peripheral drivers, and the boundary between a small
+                            loader and the firmware it is responsible for starting.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Swarm Intelligence and Edge AI</h3>
+                        <p>
+                            Exploring multi-agent behavior, simple local policies, and
+                            how those ideas might connect with edge AI systems where
+                            latency, power, memory, and NPU support all matter.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="work">
+            <div class="container">
+                <h2 class="section-title">Selected Work</h2>
+
+                <div class="work-list">
+                    <article class="work-item">
+                        <div class="work-meta">RTOS / STM32 / FreeRTOS</div>
+
+                        <h3>A FreeRTOS hang that did not look like a scheduling bug at first</h3>
 
                         <p>
-                            Practical lessons from peripheral remapping,
-                            RCC configuration, alternate functions, and
-                            hardware validation.
+                            Investigated a long-runtime system stall that led into mutex
+                            blocking while interrupts were disabled. The fix came from
+                            proving that PRIMASK was masking PendSV during a blocking path,
+                            closing the BASEPRI-only hypothesis, and restructuring the code
+                            into short snapshot and commit phases around the long-running
+                            work. The corrected firmware later passed an eight-hour
+                            endurance run without reproducing the hang.
+                        </p>
+
+                        <figure class="work-media">
+                            <img
+                                src="assets/scope-four-channel.jpg"
+                                alt="Four oscilloscope channels showing timing traces from an embedded system"
+                            >
+                        </figure>
+                    </article>
+
+                    <article class="work-item">
+                        <div class="work-meta">Current Work / Cortex-M / STM32F4</div>
+
+                        <h3>A small RTOS kernel for learning the details that commercial kernels hide</h3>
+
+                        <p>
+                            Building a minimalist kernel on STM32F4 with manually initialized
+                            thread stacks, a SysTick-driven context switch, round-robin
+                            scheduling, an idle task, millisecond delays, and blocking binary
+                            semaphores. The next pieces I am working toward are mutexes and
+                            priority inheritance, because the interesting bugs usually begin
+                            where synchronization meets scheduling policy.
+                        </p>
+
+                        <figure class="work-media">
+                            <img
+                                src="assets/stm32-scope-bench.jpg"
+                                alt="STM32 board connected to an oscilloscope and breadboard during kernel timing experiments"
+                            >
+                        </figure>
+                    </article>
+
+                    <article class="work-item">
+                        <div class="work-meta">Current Work / CPC Enhanced Control / Device Authentication</div>
+
+                        <h3>Device authentication for CPC enhanced control hardware</h3>
+
+                        <p>
+                            Working on a CPC enhanced control setup where connected
+                            devices need to identify and authenticate with each other
+                            before control behavior can be trusted. The work sits at the
+                            boundary between embedded control, board-level integration,
+                            signal validation, and practical security assumptions for
+                            devices that have to cooperate in the field.
+                        </p>
+
+                        <figure class="work-media">
+                            <img
+                                src="assets/cpc-enhanced-control-authentication.jpg"
+                                alt="CPC enhanced control hardware setup with oscilloscope signal validation and connected embedded devices"
+                            >
+                        </figure>
+                    </article>
+
+                    <article class="work-item">
+                        <div class="work-meta">Industrial Test Systems / QNX / VxWorks</div>
+
+                        <h3>Making automated firmware validation less slow and less fragile</h3>
+
+                        <p>
+                            Built firmware test applications and TCP/IP middleware for
+                            industrial test platforms, including Intel Atom/VxWorks and
+                            QNX on Zynq-7000. One redesign reduced validation time from
+                            about 35 minutes to 32 minutes per unit, which matters when a
+                            process repeats all day.
+                        </p>
+
+                        <div class="work-gallery industrial-gallery">
+                            <figure>
+                                <img
+                                    src="assets/industrial-qnx-vxworks-test-station.jpg"
+                                    alt="Industrial firmware validation station with test software, embedded boards, and debugging hardware"
+                                >
+                            </figure>
+
+                            <figure>
+                                <img
+                                    src="assets/industrial-qnx-vxworks-debug-wiring.jpg"
+                                    alt="Close-up wiring and probes on an industrial controller during QNX and VxWorks validation"
+                                >
+                            </figure>
+                        </div>
+                    </article>
+
+                    <article class="work-item">
+                        <div class="work-meta">Earlier Freelance Work / Factory IoT</div>
+
+                        <h3>Factory IoT monitoring in the middle of real production constraints</h3>
+
+                        <p>
+                            Built and installed an IoT-style monitoring setup for factory
+                            equipment several years ago, working around existing electrical
+                            panels, machine layout, sensor wiring, enclosures, and the
+                            practical realities of keeping production equipment observable
+                            without disturbing the process it was meant to watch.
+                        </p>
+
+                        <div class="work-gallery iot-gallery">
+                            <figure>
+                                <img
+                                    src="assets/factory-iot-dashboard.jpg"
+                                    alt="Factory monitoring dashboard showing current readings from production equipment"
+                                >
+                            </figure>
+
+                            <figure>
+                                <img
+                                    src="assets/factory-iot-nodes.jpg"
+                                    alt="Installed IoT monitoring nodes with LCD readouts on a factory electrical panel"
+                                >
+                            </figure>
+
+                            <figure>
+                                <img
+                                    src="assets/factory-iot-power-panel.jpg"
+                                    alt="Factory power distribution panel with monitoring devices installed beside it"
+                                >
+                            </figure>
+
+                            <figure>
+                                <img
+                                    src="assets/factory-iot-field-install.jpg"
+                                    alt="Field installation work for an IoT monitoring system in a factory"
+                                >
+                            </figure>
+                        </div>
+                    </article>
+
+                    <article class="work-item">
+                        <div class="work-meta">Automotive / Renesas MCU / CAN / LIN</div>
+
+                        <h3>Diagnostic middleware for automotive ECUs</h3>
+
+                        <p>
+                            Developed production-grade transport, network, and session
+                            layer middleware in C for Renesas microcontrollers, including
+                            LIN and CAN diagnostics with MISRA-C discipline and unit tests
+                            shaped by automotive safety expectations.
+                        </p>
+                    </article>
+
+                    <article class="work-item">
+                        <div class="work-meta">CUDA / HPC / Operating Systems</div>
+
+                        <h3>Graduate systems projects with a performance lens</h3>
+
+                        <p>
+                            Implemented CUDA versions of an LDPC decoder and explored
+                            memory placement, streaming, and loop unrolling for speedup.
+                            The project was a useful bridge between algorithmic thinking,
+                            measurement, and the practical cost of moving data.
+                        </p>
+                    </article>
+
+                    <article class="work-item">
+                        <div class="work-meta">Swarm Intelligence / Agent-Based Simulation / Python</div>
+
+                        <h3>A multi-agent simulator for exploring local rules and emergent behavior</h3>
+
+                        <p>
+                            Built a configurable Python simulation around interacting
+                            agents, local hunger cues, feeder and forager roles, movement
+                            policies, event logging, and aggregate metrics. The project
+                            is part of a broader interest in swarm intelligence: how
+                            simple local rules can produce system-level behavior, and how
+                            those ideas might later connect to edge AI on constrained
+                            hardware.
+                        </p>
+                    </article>
+
+                    <article class="work-item">
+                        <div class="work-meta">Operating Systems / Storage Systems</div>
+
+                        <h3>Log-structured file system study</h3>
+
+                        <p>
+                            Built a user-space file system prototype as part of an advanced
+                            operating systems course. I keep the source code and
+                            assignment-specific details private, but the project shaped
+                            how I think about metadata recovery, consistency, storage
+                            invariants, and tests for edge cases.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="notes">
+            <div class="container">
+                <h2 class="section-title">Notes for Engineers</h2>
+
+                <p class="section-intro">
+                    These are the kinds of articles I want this site to grow into:
+                    practical, specific, and written for people who are close to the
+                    same problems but not yet deep inside them.
+                </p>
+
+                <div class="notes-grid">
+                    <article class="note">
+                        <div class="note-type">RTOS Debugging</div>
+                        <h3>PRIMASK, BASEPRI, and the mutex wait that could not switch tasks</h3>
+                        <p>
+                            A practical walkthrough of a FreeRTOS migration bug where a
+                            task entered a blocking mutex path while PRIMASK was set.
+                            The important lesson was not only that PendSV was masked, but
+                            also why changing the wrapper to BASEPRI alone would not have
+                            fixed the design.
+                        </p>
+                    </article>
+
+                    <article class="note">
+                        <div class="note-type">Kernel Notes</div>
+                        <h3>Building a tiny scheduler before trusting a big one</h3>
+                        <p>
+                            Notes from implementing thread stacks, context switching,
+                            blocking states, timer ticks, and semaphores on Cortex-M,
+                            with mutexes and priority inheritance as the next chapter.
+                        </p>
+                    </article>
+
+                    <article class="note">
+                        <div class="note-type">Bare-Metal Notes</div>
+                        <h3>What startup code teaches before main ever runs</h3>
+                        <p>
+                            Notes on vector tables, reset handlers, stack setup, linker
+                            scripts, and why bare-metal debugging often starts before C
+                            code has really begun.
+                        </p>
+                    </article>
+
+                    <article class="note">
+                        <div class="note-type">MCU Bring-Up</div>
+                        <h3>Porting STM32 firmware without trusting the old pinout too much</h3>
+                        <p>
+                            Notes on RCC setup, alternate functions, peripheral remapping,
+                            schematic reading, and the quiet differences between MCU
+                            packages that break assumptions.
+                        </p>
+                    </article>
+
+                    <article class="note">
+                        <div class="note-type">Debugging Habits</div>
+                        <h3>How to debug embedded systems when the log is not enough</h3>
+                        <p>
+                            A practical method for combining logs, register inspection,
+                            timing measurements, and small experiments without turning
+                            the system into a new problem.
                         </p>
                     </article>
                 </div>
@@ -242,8 +737,14 @@
         </section>
 
         <section id="contact">
-            <div class="container">
+            <div class="container narrow">
                 <h2 class="section-title">Contact</h2>
+
+                <p>
+                    I am always glad to hear from people working on embedded systems,
+                    real-time software, industrial automation, transportation systems,
+                    or technical writing for engineers.
+                </p>
 
                 <p>
                     GitHub:
@@ -255,18 +756,13 @@
                         github.com/Thaewa
                     </a>
                 </p>
-
-                <p>
-                    LinkedIn and email can be added here after the first
-                    portfolio version is finalized.
-                </p>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            © 2026 Thaewa Tansarn
+            &copy; 2026 Thaewa Tansarn
         </div>
     </footer>
 </body>
