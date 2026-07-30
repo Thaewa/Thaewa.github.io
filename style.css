@@ -178,6 +178,18 @@ nav {
     color: #061312;
 }
 
+.case-study-links {
+    margin-top: 22px;
+}
+
+.note-link {
+    color: var(--accent-dark);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-underline-offset: 4px;
+}
+
 section {
     padding: 72px 0;
 }
